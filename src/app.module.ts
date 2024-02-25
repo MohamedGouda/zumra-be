@@ -5,16 +5,13 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { AuthModule } from './auth/auth.module';
 import { UserModule } from './user/user.module';
 import { CurrencyModule } from './currency/currency.module';
-import { config } from 'dotenv';
 import { join } from 'path';
 import { HistoryModule } from './history/history.module';
-
-config({ path: join(__dirname, '..', '.env') });
 
 
 @Module({
   imports: [
-    MongooseModule.forRoot(process.env.connection_string),
+    MongooseModule.forRoot('mongodb://localhost:27017/zumraDB'),
     AuthModule,
     UserModule,
     CurrencyModule,

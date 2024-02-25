@@ -16,10 +16,10 @@ export class CurrencyService {
   async convert(currencyDto: currencyConverterDto, user: any) {
     try {
       const response = await axios.get(
-        `${process.env.APP_Converter_URL}${currencyDto.value}/${currencyDto.from}/${currencyDto.to}`,
+        `https://openexchangerates.org/api/convert/${currencyDto.value}/${currencyDto.from}/${currencyDto.to}`,
         {
           params: {
-            app_id: process.env.API_APP_KEY, 
+            app_id: '6933d5d052d646f982f57d883f28a04c', 
           },
         },
       );
