@@ -11,7 +11,7 @@ import { HistoryModule } from './history/history.module';
 
 @Module({
   imports: [
-    MongooseModule.forRoot('mongodb+srv://mgouda:4DKTHBTCiTCKbzBy@cluster0.kiv0j4q.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0/zumraDB'),
+    MongooseModule.forRoot('mongodb+srv://mgouda:4DKTHBTCiTCKbzBy@cluster0.kiv0j4q.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'),
     AuthModule,
     UserModule,
     CurrencyModule,
